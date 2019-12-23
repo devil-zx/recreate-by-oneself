@@ -20,6 +20,7 @@ public class UserController {
     @RequestMapping("/go")
     public Object test(){
         List<User> allUser = userService.getAllUser();
+        System.out.println(allUser.size());
         return allUser;
     }
 
