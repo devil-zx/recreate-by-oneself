@@ -2,23 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <packaging>pom</packaging>
-    <modules>
-        <module>email-parent</module>
-        <module>email-parent</module>
-        <module>email-api</module>
-        <module>email-users</module>
-    </modules>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
+        <groupId>com.zx.email</groupId>
+        <artifactId>email-parent</artifactId>
         <version>2.2.2.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>email</artifactId>
+    <groupId>email.zx</groupId>
+    <artifactId>email-user</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>email</name>
+    <name>email-user</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -30,10 +22,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jdbc</artifactId>
         </dependency>
-<!--        <dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>-->
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -43,7 +35,10 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>2.1.1</version>
         </dependency>
-
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -55,6 +50,15 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <!-- <dependency>
+             <groupId>com.zx.email</groupId>
+             <artifactId>email-api</artifactId>
+             <version>2.2.2</version>
+         </dependency>-->
     </dependencies>
 
     <build>
